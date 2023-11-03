@@ -2164,9 +2164,19 @@ text-align: center;
     }
     .contact .contact_boxs .contact_box1{
         margin-left: 0px;
-        font-size: 0.4rem;
+    
     } 
      .contact .contact_boxs .contact_box h3{
+         text-align: center;
+         
+        } 
+    .contact .contact_boxs .contact_box h4{
+        margin-top: 15px;
+        font-size: 0.4rem;
+        }
+ 
+ 
+        .contact .contact_boxs .contact_box h3{
          text-align: center;
          font-size: 0.5rem;
         }
