@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(bg3.jpg); background-size: cover;">
+    <div class="form-container" >
+        <h2>Booking Details</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Enter your address">
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number">
+
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark" placeholder="Enter nearby landmark">
+
+        <label for="email">E-mail ID:</label>
+        <input type="email" id="email" placeholder="Enter your email ID">
+
+        <label for="accommodation">Accommodation Type:</label>
+        <select id="accommodation">
+            <option value="house">House</option>
+            <option value="hostel">Hostel</option>
+            <option value="flat">Flat</option>
+        </select>
+
+        <h2>Payment Options</h2>
+
+        <label>
+            <input type="radio" name="payment" value="cod" onclick="showCardDetails()"> Cash on Delivery
+        </label>
+        <label>
+            <input type="radio" name="payment" value="card" onclick="showCardDetails()"> Card
+        </label>
+        <label>
+            <input type="radio" name="payment" value="upi" onclick="showCardDetails()"> UPI
+        </label>
+
+        <div id="card-details" style="display:none;">
+            <h3>Card Details</h3>
+
+            <label for="card-holder-name">Name of the Card Holder:</label>
+            <input type="text" id="card-holder-name" placeholder="Card holder's name">
+
+            <label for="bank-name">Bank Name:</label>
+            <input type="text" id="bank-name" placeholder="Enter bank name">
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="Enter card number">
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="month" id="expiry-date">
+        </div>
+
+        <button onclick="processPayment()">Proceed with Payment</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
