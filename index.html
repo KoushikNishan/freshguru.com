@@ -17,9 +17,9 @@
         <div class="fas fa-close" id="close-btn2"></div>
         <a href="#home">home</a>
         <a href="#features">features</a>
-        <a href="#products">products</a>
+        <a href="product.html">products</a>
         <a href="#review">review</a>
-        <a href="#offer">offer</a>
+        <a href="offer.html">offer</a>
        </nav>
 
        <div class="icons">
@@ -87,7 +87,7 @@
 
             <div class="total">
                 total:₹450&#8360
-                <a href="" class="btn">check out</a>
+                <a href="from.html" class="btn">check out</a>
             </div>
        </div>
 
@@ -909,39 +909,20 @@
 
 <!--sec part 444444444444444444-->
 </section>
-<section class="mom"></section>
-<h1 class="heading"><span>REVIEW</span></h1>
-<section class="review" id="review">
-    <div class="container">
-        <div class="head">
-            <h1>post a comment</h1>
-            <div><span class="comment">0</span>comment</div>
-            <div class="text"><p>we are here from you</p></div>
-            <div class="comments">
-    
-            </div>
-    
-            <div class="commentbox">
-                <img src="user.png" alt="">
-                <div class="content">
-                    <h2>comment as</h2>
-                    <input type="text" value="Anonymous" class="user">
-                    <div class="commentinput">
-                        <input type="text" placeholder="enter a comment" class="usercomment">
-                        <div class="buttons">
-                            <button type="submit" disabled id="publish">publish</button>
-    
-                            <div class="notify">
-                                <input type="checkbox" class="notifyinput"> <span>notify me</span>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <p class="policy">this site is protected by reCAPTCHA and the google <a href="">privacy policy</a> and <a href="">trems of services</a>apply.</p>
-                </div>
-            </div>
+<section class="mom">
+<div class="comment-box">
+            <h2>Leave a Comment</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <textarea id="comment" placeholder="Your Comment"></textarea>
+            <button onclick="addComment()">Comment</button>
         </div>
-    </div>
+    
+        <div id="comments-section">
+            <h2>Comments</h2>
+            <ul id="comments-list"></ul>
+        </div>
+    
+    
     </section>
 
     <!--section part 5on location-->
