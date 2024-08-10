@@ -464,3 +464,84 @@ function addPost(){
 
 
 publishBtn.addEventListener("click", addPost)
+
+
+
+
+//comment area
+
+function addComment() {
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    if (name && comment) {
+        const commentList = document.getElementById('comments-list');
+
+        const newComment = document.createElement('li');
+        newComment.innerHTML = `<span class="name">${name}:</span> ${comment} <button onclick="deleteComment(this)">Delete</button>`;
+
+        commentList.appendChild(newComment);
+
+        // Clear input fields after adding comment
+        document.getElementById('name').value = '';
+        document.getElementById('comment').value = '';
+    } else {
+        alert("Please enter both your name and comment.");
+    }
+}
+
+function deleteComment(button) {
+    const commentToDelete = button.parentElement;
+    commentToDelete.remove();
+}
+
+
+/*from area*/
+
+
+function showCardDetails() {
+    const paymentOptions = document.getElementsByName('payment');
+    let cardDetails = document.getElementById('card-details');
+
+    for (let i = 0; i < paymentOptions.length; i++) {
+        if (paymentOptions[i].checked) {
+            if (paymentOptions[i].value === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        }
+    }
+}
+
+function processPayment() {
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    const landmark = document.getElementById('landmark').value;
+    const email = document.getElementById('email').value;
+    const accommodation = document.getElementById('accommodation').value;
+    const paymentOptions = document.getElementsByName('payment');
+    let selectedPayment;
+
+    for (let i = 0; i < paymentOptions.length; i++) {
+        if (paymentOptions[i].checked) {
+            selectedPayment = paymentOptions[i].value;
+            break;
+        }
+    }
+
+    if (selectedPayment === 'card') {
+        const cardHolderName = document.getElementById('card-holder-name').value;
+        const bankName = document.getElementById('bank-name').value;
+        const cardNumber = document.getElementById('card-number').value;
+        const expiryDate = document.getElementById('expiry-date').value;
+
+        if (!cardHolderName || !bankName || !cardNumber || !expiryDate) {
+            alert('Please fill out all card details.');
+            return;
+        }
+    }
+
+    alert('Payment processing...');
+}
